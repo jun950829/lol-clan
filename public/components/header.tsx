@@ -58,16 +58,6 @@ const Header: NextPage = () => {
         })
     }
 
-    const showSubMenu = () => {
-        menuRefs.current.style.height = '80px';
-        menuRefs.current.style.borderBottom = '1px solid #ddd';
-    }
-
-    const hideSubMenu = () => {
-        menuRefs.current.style.height = '0';
-        menuRefs.current.style.borderBottom = '0';
-    }
-
     const showSubMenuText = (idx : number) => (e : any) => {
         setIdx(idx);
         menuRefs.current.style.height = '80px';
@@ -109,7 +99,7 @@ const Header: NextPage = () => {
                     removeBold();
                     router.push("/");
                 }}>
-                    <Image src={logoImg} alt="비블록 투자자보호센터 로고"/>
+                    <Image src={logoImg} alt="사이트 로고"/>
                 </div>
                 {/* onMouseEnter={showSubMenu} onMouseLeave={hideSubMenu} */}
                 <div className='menus' css={styleCss}>

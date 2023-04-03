@@ -8,7 +8,7 @@
     "build": "env-cmd -f ./.env.development next build",
     "build_prod": "env-cmd -f ./.env.production next build",
     "start": "env-cmd -f ./.env.development next start",
-    "start:production": "env-cmd -f ./.env.production next start",
+    "start_prod": "env-cmd -f ./.env.production next start",
     "export": "npm run build && next export",
     "export_prod": "npm run build_prod && next export"
   },

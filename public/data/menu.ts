@@ -1,6 +1,6 @@
 export const HEADER_MENU = [
     {
-        "title" : "BeeTrust", 
+        "title" : "사이트 소개", 
         "path" : "/beetrust/safety",
         "key" : "beetrust",
         "list" : [
@@ -17,7 +17,7 @@ export const HEADER_MENU = [
         ],
     },
     {
-        "title" : "센터소개", 
+        "title" : "전적검색", 
         "path" : "/care/manifesto",
         "key" : "care",
         "list" : [
@@ -31,74 +31,54 @@ export const HEADER_MENU = [
                 "path" : "/care/propulsion",
                 "key" : "propulsion"
             },
-            // {
-            //     "title" : "이행지침", 
-            //     "path" : "/care/guidelines",
-            //     "key" : "guidelines"
-            // },
         ],
     },
     {
-        "title" : "가상자산", 
+        "title" : "팀정하기", 
         "path" : "/asset/weekly",
         "key" : "asset",
         "list" : [
-            {
-                "title" : '비블록 주간 리포트',
-                "path" : '/asset/weekly',
-                "key" : 'weekly',
-            },
-            {
-                "title" : "시장 동향・정보", 
-                "path" : "/asset/va",
-                "key" : "va"
-            },
-            {
-                "title" : " 보고서", 
-                "path" : "/asset/report",
-                "key" : "report"
-            },
-            {
-                "title" : ' 관련뉴스',
-                "path" : '/asset/vanews',
-                "key" : 'news'
-            },
         ],
     },
     {
-        "title" : "비블록 신문고", 
+        "title" : "미니게임", 
         "path" : "/beeblockCare/request",
         "key" : "beeblockCare",
         "list" : [            
             {
-                "title" : "서비스 신청", 
+                "title" : "돌림판", 
                 "path" : "/beeblockCare/request",
                 "key" : "request"
             },
+            {
+                "title" : "사다리타기", 
+                "path" : "/care/propulsion",
+                "key" : "propulsion"
+            },
         ],
     },
-    {
-        "title" : "센터소식", 
-        "path" : "/news/greetings",
-        "key" : "news",
-        "list" : [
-            {
-                "title" : "인사말", 
-                "path" : "/news/greetings",
-                "key" : "greetings"
-            },
-            {
-                "title" : "공지사항", 
-                "path" : "/news/notice",
-                "key" : "notice"
-            },
-            {
-                "title" : "Contact Us", 
-                "path" : "/news/contactus",
-                "key" : "contact"
-            },
-        ],
-    }
+    // {
+    //     "title" : "센터소식", 
+    //     "path" : "/news/greetings",
+    //     "key" : "news",
+    //     "list" : [
+    //         {
+    //             "title" : "인사말", 
+    //             "path" : "/news/greetings",
+    //             "key" : "greetings"
+    //         },
+    //         {
+    //             "title" : "공지사항", 
+    //             "path" : "/news/notice",
+    //             "key" : "notice"
+    //         },
+    //         {
+    //             "title" : "Contact Us", 
+    //             "path" : "/news/contactus",
+    //             "key" : "contact"
+    //         },
+    //     ],
+    // }
 ];
 
 
