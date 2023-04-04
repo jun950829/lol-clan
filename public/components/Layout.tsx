@@ -73,11 +73,11 @@ const Layout  = (props: { children: React.ReactNode }) => {
                 }`
             }>
                 {props.children}
-                {
+                {/* {
                     mobileView
                     ? null
                     : <BrowserChange />
-                }
+                } */}
             </section>
             
         {/* {
