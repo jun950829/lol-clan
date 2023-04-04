@@ -155,107 +155,111 @@ const Home: NextPage = (props : any) => {
   `
 
   return (
-  <section id='mainPage' css={baseStyle_m}>
-    <Image className="mainbannerCover" css={positionCover} src={mainbannerCover} alt={'banner'}/>
-    <div className='mainPageContent'>
-      <div className="mainBanner" css={mainImg}>
-        <div className='centerSet'>
-          <div className='mainArea'>
-            <div className="topNoticeArea">
-              {/* <div className="topNotce">
-                <div className="layoutWrap">
-                  <div className="leftZone">
-                    <div className="noticeImg">
-                      <Image src={noticeImg} alt="NOTICE" />
-                    </div>
-                    <p>공지</p>
-                  </div>
-                  <div className="midZone" onClick={() => {
-                      router.push('/news/notice');
-                  }}>
-                    <p>투자자보호센터, 대학생들과 건강한 투자문화 조성 나선다.</p>
-                  </div>
-                </div>
-                <div className="rightZone">
-                  <div className="date">
-                    <p>2022/11/22</p>
-                  </div>
-                </div>
-              </div> */}
-            </div>
-            <div className="mainTextArea">
-              <div className="mainText">
-                <p className="top_text">안전한 가상자산의 기본</p>
-                <p className="mid_text">비블록 투자자 보호센터</p>
-                <p className="bot_text">가상자산통합플랫폼 운영사 그레이브릿지</p>
-              </div>
-            </div>
-            <div className="mainRinkBtnArea">
-              <div className="linkBox link_01" onClick={() => {
-                  window.open('https://www.beeblock.co.kr/');
-                }}>
-                {/* <div className="circle"></div> */}
-                <div className="linkTextBox">
-                  <p>비블록 바로가기</p>
-                  {/* <div className="arrow">
-                    <Image src={arrowImg} alt="" />
-                  </div> */}
-                </div>
-              </div>
-              <div className="linkBox link_02" onClick={() => {
-                  router.push('/asset/vanews');
-                }}>
-                {/* <div className="circle"></div> */}
-                <div className="linkTextBox">
-                  <p>투자자보호 뉴스</p>
-                  {/* <div className="arrow">
-                    <Image src={arrowImg} alt="" />
-                  </div> */}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* <Image className="mainbannerImg" src={mainbannerImg} alt={'banner'}/> */}
-      </div>
-    </div>
-    <div className="componentsArea">
-      <div className="centerSet componentsWrap_center">
-        <div className="first_component">
-          <div className="componentArea section01">
-            <SafetyComponent data={props['safetyData']} />
-            <Image src={section1_Img} width={1200} alt="" />
-          </div>
-        </div>
+  // <section id='mainPage' css={baseStyle_m}>
+  //   <Image className="mainbannerCover" css={positionCover} src={mainbannerCover} alt={'banner'}/>
+  //   <div className='mainPageContent'>
+  //     <div className="mainBanner" css={mainImg}>
+  //       <div className='centerSet'>
+  //         <div className='mainArea'>
+  //           <div className="topNoticeArea">
+  //             {/* <div className="topNotce">
+  //               <div className="layoutWrap">
+  //                 <div className="leftZone">
+  //                   <div className="noticeImg">
+  //                     <Image src={noticeImg} alt="NOTICE" />
+  //                   </div>
+  //                   <p>공지</p>
+  //                 </div>
+  //                 <div className="midZone" onClick={() => {
+  //                     router.push('/news/notice');
+  //                 }}>
+  //                   <p>투자자보호센터, 대학생들과 건강한 투자문화 조성 나선다.</p>
+  //                 </div>
+  //               </div>
+  //               <div className="rightZone">
+  //                 <div className="date">
+  //                   <p>2022/11/22</p>
+  //                 </div>
+  //               </div>
+  //             </div> */}
+  //           </div>
+  //           <div className="mainTextArea">
+  //             <div className="mainText">
+  //               <p className="top_text">안전한 가상자산의 기본</p>
+  //               <p className="mid_text">비블록 투자자 보호센터</p>
+  //               <p className="bot_text">가상자산통합플랫폼 운영사 그레이브릿지</p>
+  //             </div>
+  //           </div>
+  //           <div className="mainRinkBtnArea">
+  //             <div className="linkBox link_01" onClick={() => {
+  //                 window.open('https://www.beeblock.co.kr/');
+  //               }}>
+  //               {/* <div className="circle"></div> */}
+  //               <div className="linkTextBox">
+  //                 <p>비블록 바로가기</p>
+  //                 {/* <div className="arrow">
+  //                   <Image src={arrowImg} alt="" />
+  //                 </div> */}
+  //               </div>
+  //             </div>
+  //             <div className="linkBox link_02" onClick={() => {
+  //                 router.push('/asset/vanews');
+  //               }}>
+  //               {/* <div className="circle"></div> */}
+  //               <div className="linkTextBox">
+  //                 <p>투자자보호 뉴스</p>
+  //                 {/* <div className="arrow">
+  //                   <Image src={arrowImg} alt="" />
+  //                 </div> */}
+  //               </div>
+  //             </div>
+  //           </div>
+  //         </div>
+  //       </div>
+  //       {/* <Image className="mainbannerImg" src={mainbannerImg} alt={'banner'}/> */}
+  //     </div>
+  //   </div>
+  //   <div className="componentsArea">
+  //     <div className="centerSet componentsWrap_center">
+  //       <div className="first_component">
+  //         <div className="componentArea section01">
+  //           <SafetyComponent data={props['safetyData']} />
+  //           <Image src={section1_Img} width={1200} alt="" />
+  //         </div>
+  //       </div>
 
-        <div className="second_component">
-          <div className="componentArea section02"> 
-            <SafetySlideComponent data={props['crimeData']} />
-            <Image src={section2_Img} width={1200} alt="" />
-          </div>
-        </div>
+  //       <div className="second_component">
+  //         <div className="componentArea section02"> 
+  //           <SafetySlideComponent data={props['crimeData']} />
+  //           <Image src={section2_Img} width={1200} alt="" />
+  //         </div>
+  //       </div>
 
-        <div className="first_component">
-          <div className="componentArea section03">
-            <div className="btnArea" css={btnAreaCSS}>
-                <div className="btnWrap">
-                  <div className="menuBtn" onClick={() => {
-                    router.push('/beeblockCare/request');
-                  }}>
-                      <p className="font_change_paybooc">서비스 신청</p>
-                      <div className="arrow"></div>
-                  </div>
-                </div>
-            </div>
-            <Image src={section3_Img} width={1200} alt="" />
-          </div>
+  //       <div className="first_component">
+  //         <div className="componentArea section03">
+  //           <div className="btnArea" css={btnAreaCSS}>
+  //               <div className="btnWrap">
+  //                 <div className="menuBtn" onClick={() => {
+  //                   router.push('/beeblockCare/request');
+  //                 }}>
+  //                     <p className="font_change_paybooc">서비스 신청</p>
+  //                     <div className="arrow"></div>
+  //                 </div>
+  //               </div>
+  //           </div>
+  //           <Image src={section3_Img} width={1200} alt="" />
+  //         </div>
           
-        </div>
-      </div>
-        <Image className="mainbannerCoverBottom" css={positionCoverBottom} src={main_banner_bottom_green} alt={'banner'}/>
+  //       </div>
+  //     </div>
+  //       <Image className="mainbannerCoverBottom" css={positionCoverBottom} src={main_banner_bottom_green} alt={'banner'}/>
       
-    </div>
+  //   </div>
     
+  // </section>
+  <section>
+    <p>메인페이지 미완성</p>
+    <div>전적 검색 - 검색 이용해주세요</div>
   </section>
   );
   
