@@ -1,59 +1,54 @@
 export const HEADER_MENU = [
     {
         "title" : "사이트 소개", 
-        "path" : "/beetrust/safety",
-        "key" : "beetrust",
+        "path" : "/introduce",
+        "key" : "introduce",
         "list" : [
             {
-                "title" : "비블록 안전장치", 
-                "path" : "/beetrust/safety",
-                "key" : "safety"
+                "title" : "소개", 
+                "path" : "/introduce",
+                "key" : "introduce"
             },
-            {
-                "title" : "가상자산 범죄 사례", 
-                "path" : "/beetrust/crimecase",
-                "key" : "crime"
-            }
         ],
     },
     {
         "title" : "전적검색", 
-        "path" : "/care/manifesto",
-        "key" : "care",
+        "path" : "/search",
+        "key" : "search",
         "list" : [
             {
-                "title" : "선언문", 
-                "path" : "/care/manifesto",
-                "key" : "manifesto"
-            },
-            {
-                "title" : "추진체계", 
-                "path" : "/care/propulsion",
-                "key" : "propulsion"
+                "title" : "검색", 
+                "path" : "/search",
+                "key" : "search"
             },
         ],
     },
     {
         "title" : "팀정하기", 
-        "path" : "/asset/weekly",
-        "key" : "asset",
+        "path" : "/team",
+        "key" : "team",
         "list" : [
+            {
+                "title" : "팀정하기", 
+                "path" : "/team",
+                "key" : "team"
+            },
         ],
     },
     {
         "title" : "미니게임", 
-        "path" : "/beeblockCare/request",
-        "key" : "beeblockCare",
+        "path" : "/minigame",
+        "key" : "minigame",
         "list" : [            
             {
                 "title" : "돌림판", 
-                "path" : "/beeblockCare/request",
-                "key" : "request"
+                "path" : "/minigame/roundpan",
+                "key" : "roundpan"
             },
             {
                 "title" : "사다리타기", 
-                "path" : "/care/propulsion",
-                "key" : "propulsion"
+                "path" : "/minigame/ladder",
+                "key" : "ladder"
             },
         ],
     },

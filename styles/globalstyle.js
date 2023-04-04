@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
 /** 글로벌 default css 세팅 */
-const style = css`
+export const style = css`
   @charset "UTF-8";
 
   * {
@@ -22,4 +22,9 @@ const style = css`
   }
 `;
 
-export default style;
+export const searchBtn = css`
+  width : 100px;
+  height : 100%;
+  border : 1px solid #ccc;
+  border-radius : 3px;
+`;

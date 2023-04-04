@@ -21,9 +21,8 @@ import arrowImg from '@/images/icon/arrow.png';
 import section1_Img from '@/images/main_page/mainpage_sub_banner01.webp';
 import section2_Img from '@/images/main_page/mainpage_sub_banner02.webp';
 import section3_Img from '@/images/main_page/mainpage_sub_banner03.webp';
-import { useRecoilValueLoadable, useRecoilState, useRecoilValue, useSetRecoilState, useResetRecoilState } from "recoil";
-import { getAdminDataSelector } from "../public/states/store";
-import isMobileData from '@/states/atom/atom';
+import { useRecoilValue } from "recoil";
+// import { getAdminDataSelector } from "../public/states/store";
 
 
 
@@ -34,11 +33,6 @@ import isMobileData from '@/states/atom/atom';
 
 const Home: NextPage = (props : any) => {
 
-  let mobileView = useRecoilValue(isMobileData);  // 읽기 전용!
-  // const counterHandler = useSetRecoilState(isMobileData); // 값만 변경 시키기 
-
-
-  const name = useRecoilValueLoadable(getAdminDataSelector);
   const router = useRouter();
 
   const btnAreaCSS = css`  
@@ -161,106 +155,6 @@ const Home: NextPage = (props : any) => {
   `
 
   return (
-    mobileView ?
-
-    <section id='mainPage' css={baseStyle}>
-      <Image className="mainbannerCover" css={positionCover} src={mainbannerCover} alt={'banner'}/>
-      <div className='mainPageContent'>
-        <div className="mainBanner" css={mainImg_m}>
-          <div className='centerSet'>
-            <div className='mainArea'>
-              <div className="topNoticeArea">
-              </div>
-              <div className="mainTextArea">
-                <div className="mainText">
-                  <p className="top_text">안전한 가상자산의 기본</p>
-                  <p className="mid_text">비블록 투자자 보호센터</p>
-                  <p className="bot_text">가상자산통합플랫폼 운영사 그레이브릿지</p>
-                </div>
-              </div>
-              <div className="mainRinkBtnArea">
-                <div className="linkBox link_01" onClick={() => {
-                    window.open('https://www.beeblock.co.kr/');
-                  }}>
-                  <div className="circle"></div>
-                  <div className="linkTextBox">
-                    <p>비블록 바로가기</p>
-                    <div className="arrow">
-                      <Image src={arrowImg} alt="" />
-                    </div>
-                  </div>
-                </div>
-                <div className="linkBox link_02" onClick={() => {
-                    router.push('/asset/vanews');
-                  }}>
-                  <div className="circle"></div>
-                    <div className="linkTextBox">
-                      <p>투자자보호 뉴스</p>
-                      <div className="arrow">
-                        <Image src={arrowImg} alt="" />
-                      </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <Image className="mainbannerImg" src={mainbannerImg} alt={'banner'}/> */}
-        </div>
-      </div>
-      <div className="componentsArea">
-        <div className='textArea'>
-          <h2>비블록 투자자 보호센터와 함께하세요!</h2>
-          <p>안전한 가상자산의 기준을 제시합니다.</p>
-        </div>
-        <Image src={mainpage_back_m} width={1200} alt="" />
-        <div className="componentsWrap_center">
-          <div className="first_component">
-            <div className="componentArea section01">
-              <SafetyComponent data={props['safetyData']} />
-            </div>
-          </div>
-
-          <div className="second_component">
-            <div className='textArea_Second'>
-              <h2>가상자산 범죄 유형 및 예방</h2>
-              <p>가상자산 관련 투자 사기 유형을 알려드립니다.</p>
-            </div>  
-
-            <div className="componentArea section02"> 
-              <SafetySlideComponent data={props['crimeData']} />
-            </div>
-          </div>
-
-          <div className="third_component">
-
-            <div className='textAreaThird'>
-              <h2>비블록 신문고</h2>
-              <p>투자자를 보호하기 위한 상담 서비스입니다.</p>
-            </div>
-            <div className="componentArea section03">
-              <Image src={mainpage_third_m} width={1200} alt="" />
-              <div className="btnArea" css={btnAreaCSS}>
-                  <div className="btnWrap">
-                    <div className="menuBtn" onClick={() => {
-                      router.push('/beeblockCare/request');
-                    }}>
-                        <p className="font_change_paybooc">서비스 신청</p>
-                        <div className="arrow"></div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-          {/* <Image className="mainbannerCoverBottom" css={positionCoverBottom} src={main_banner_bottom_green} alt={'banner'}/> */}
-        
-      </div>
-      
-    </section>
-
-    :
-
   <section id='mainPage' css={baseStyle_m}>
     <Image className="mainbannerCover" css={positionCover} src={mainbannerCover} alt={'banner'}/>
     <div className='mainPageContent'>

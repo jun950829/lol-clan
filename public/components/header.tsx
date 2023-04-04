@@ -1,11 +1,9 @@
-import type { NextPage } from "next";
-import Image from 'next/image';
 import { css } from '@emotion/react';
+import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from 'react';
 import { HEADER_MENU } from '../data/menu';
 
-import logoImg from '@/images/main_logo.png';
 
 const Header: NextPage = () => {
     const menuRefs : any = useRef();
@@ -99,7 +97,8 @@ const Header: NextPage = () => {
                     removeBold();
                     router.push("/");
                 }}>
-                    <Image src={logoImg} alt="사이트 로고"/>
+                    {/* <Image src={logoImg} alt="사이트 로고"/> */}
+                    {'LOL CLAN SITE'}
                 </div>
                 {/* onMouseEnter={showSubMenu} onMouseLeave={hideSubMenu} */}
                 <div className='menus' css={styleCss}>

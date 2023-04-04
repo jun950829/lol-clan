@@ -53,7 +53,7 @@ const Input = (Props: Props) => {
     const { placeholder, className } = Props;
     const contentClassName = Props.className;
     
-    const [text, setText] = useState('');
+    const [text, setText] = useState(Props.text);
 
     const onChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
         setText(e.target.value);

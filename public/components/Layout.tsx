@@ -11,9 +11,6 @@ import { useEffect, useState } from 'react';
 import { css, Global } from '@emotion/react';
 import { useRecoilValueLoadable, useRecoilState, useRecoilValue, useSetRecoilState, useResetRecoilState } from "recoil";
 import isMobileData from '../states/atom/atom';
-import isHostUrl from '../states/atom/host';
-import { getAdminDataSelector, getWeeklyDataSelector, getSNDataSelector, getVaDataSelector, getVAreportSelector, getCryptoNews } from "@/states/store";
-
 
 
 const Layout  = (props: { children: React.ReactNode }) => {
@@ -22,21 +19,16 @@ const Layout  = (props: { children: React.ReactNode }) => {
     const mobileView = useRecoilValue(isMobileData);  // 읽기 전용!
     const counterHandler = useSetRecoilState(isMobileData); // 값만 변경 시키기 
 
-    //운영이라면 주석 풀기
-    const hosturl = useRecoilValue(isHostUrl);
-    const globalHostUrlSet = useSetRecoilState(isHostUrl);
-
-
     //운영일땐 주석 풀기
     // globalHostUrlSet((pre: any) => pre = 'https://beeblock.co.kr');
 
 
-    const admin = useRecoilValueLoadable(getAdminDataSelector);
-    const va = useRecoilValueLoadable(getVaDataSelector);
-    const sn = useRecoilValueLoadable(getSNDataSelector);
-    const vareport = useRecoilValueLoadable(getVAreportSelector);
-    const weekly = useRecoilValueLoadable(getWeeklyDataSelector);
-    const crypto = useRecoilValueLoadable(getCryptoNews);
+    // const admin = useRecoilValueLoadable(getAdminDataSelector);
+    // const va = useRecoilValueLoadable(getVaDataSelector);
+    // const sn = useRecoilValueLoadable(getSNDataSelector);
+    // const vareport = useRecoilValueLoadable(getVAreportSelector);
+    // const weekly = useRecoilValueLoadable(getWeeklyDataSelector);
+    // const crypto = useRecoilValueLoadable(getCryptoNews);
     
     // },[hosturl]);
 
@@ -88,11 +80,11 @@ const Layout  = (props: { children: React.ReactNode }) => {
                 }
             </section>
             
-        {
+        {/* {
             mobileView
             ? <Footer_m />
             : <Footer />
-        }
+        } */}
     </>
     )
 }

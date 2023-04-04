@@ -26,19 +26,6 @@ const nextConfig = {
   images : {
     unoptimized : true,
   },
-
-  async rewrites() {
-		return [
-			{
-				source: "/api/:path*",
-				destination: process.env.NEXT_PUBLIC_WEB_URL + "api/:path*",
-			},
-			{
-				source: "/api/contact/:path*",
-				destination: process.env.NEXT_PUBLIC_WEB_URL + "api/contact/:path*",
-			},
-		];
-	},
 }
 
 module.exports = nextConfig
