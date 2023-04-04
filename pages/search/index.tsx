@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import { useEffect, useState } from 'react';
 import { searchBtn } from 'styles/globalstyle';
 import Image from 'next/image';
-import RankInfoLayer from '@/components/search/rankinfolayer'
+import RankInfoLayer from '@/components/search/RankInfoLayer';
 
 
 const SearchSection : NextPage = (props : any) => {

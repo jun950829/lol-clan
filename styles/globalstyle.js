@@ -28,3 +28,6 @@ export const searchBtn = css`
   border : 1px solid #ccc;
   border-radius : 3px;
 `;
+
+
+export default style;
