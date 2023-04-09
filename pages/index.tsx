@@ -27,7 +27,7 @@ import { useRecoilValue } from "recoil";
 
 
 <Head>
-  <title>비블록 투자자보호센터</title>
+  <title>LOL CLAN SITE</title>
   <link rel="icon" href="/favicon.ico" />
 </Head>
 

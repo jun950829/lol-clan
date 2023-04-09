@@ -29,7 +29,7 @@ const RankInfoLayer = (Props : {rankData : RANK_LAYER_INTERFACE, rankImageUrl: a
     const rankImageUrl = Props.rankImageUrl;
 
     const baseStyle = css`
-        width: 350px;
+        width: 380px;
         height: 150px;
         border : 1px solid #000;
         border-radius : 10px;

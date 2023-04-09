@@ -101,7 +101,8 @@ const HeaderMobile: NextPage = () => {
                     setCloseAll(true);
                 }}>
 
-                <Image src={logoImg} width={200} alt=""/>
+                {/* <Image src={logoImg} width={200} alt=""/> */}
+                <p>LOL CLAN SITE</p>
                 </div>
                 <div className='sideMenuBtn' onClick={check}>
                     <div></div>

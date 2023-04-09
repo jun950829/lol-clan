@@ -4,6 +4,9 @@ import { useEffect, useState } from 'react';
 import { searchBtn } from 'styles/globalstyle';
 import Image from 'next/image';
 import RankInfoLayer from '@/components/search/RankInfoLayer';
+import MatchListLayer from '@/components/search/MatchListLayer';
+import colors from "@styles/color/light";
+import { radius } from "@styles/ui/spacing";
 
 
 const SearchSection : NextPage = (props : any) => {
@@ -24,11 +27,10 @@ const SearchSection : NextPage = (props : any) => {
     }
 
     const baseStyle = css`
-        width: 100%;
 
         input {
-            width: 100%;
-            height: 100%;
+            width: 60%;
+            height: 50px;
             border: 1px solid #333333;
             border-radius: 5px;
             background: #E9E9E9;
@@ -43,12 +45,25 @@ const SearchSection : NextPage = (props : any) => {
         }
 
         .input_layer {
-            width : 50%;
+            width : 80%;
+            height: 100px;
             margin: 0 auto;
 
             display : flex;
             flex-direction : row;
-            justify-content : space-between;
+            justify-content : space-around;
+            align-items : center;
+
+            background-color : ${colors.main400};
+            ${radius.m(10)}
+        }
+
+        .rank_info_layer {
+            width: 100%;
+            display : flex;
+            flex-direction : row;
+            justify-content : space-around;
+
         }
 
         .summoner_layer {
@@ -81,8 +96,7 @@ const SearchSection : NextPage = (props : any) => {
                 color : #ffffff;
                 font-size : 15px;
                 text-align: center;
-            }
-            
+            } 
         }
     `;
 
@@ -106,7 +120,7 @@ const SearchSection : NextPage = (props : any) => {
 
 
     return (
-        <section css={baseStyle}>
+        <section css={baseStyle} className="center">
             {isSearch ?
             <div className="middle_layer">
                 <div className="summoner_layer">
@@ -130,6 +144,10 @@ const SearchSection : NextPage = (props : any) => {
                 <button css={searchBtn} onClick={() => {
                 apiTest(summonerId)} }>검색</button>
             </div>
+
+            {isSearch ?
+            <MatchListLayer matchList={summonerData.matchDataList}></MatchListLayer>
+            : <></>}
 
         </section>
     );
