@@ -46,6 +46,10 @@ const MatchInfoLayer = (Props : { matchData : any }) => {
             background-color : ${colors.red100}
         }
 
+        &.win {
+            background-color : ${colors.blue100}
+        }
+
 
     `;
     

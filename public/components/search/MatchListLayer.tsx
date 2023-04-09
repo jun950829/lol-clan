@@ -18,7 +18,7 @@ const MatchListLayer = (Props : any) => {
         {matchDatas.map((match : any, idx : number) => {
             if(idx == 1)
             return <div>
-                {<MatchInfoLayer matchData={match.info} key={idx}></MatchInfoLayer>
+                {<MatchInfoLayer matchData={match.info} key={match.info.gameId}></MatchInfoLayer>
                 }
                 <br/>
             </div>
