@@ -15,6 +15,8 @@ const SearchSection : NextPage = (props : any) => {
     })
     const [summonerData, setSummonerData] = useState(Object);
     const [isSearch = false, setIsSearch] = useState(Boolean);
+    
+    let count = 0;
 
     const { summonerId } = inputs;
 
@@ -111,6 +113,7 @@ const SearchSection : NextPage = (props : any) => {
             if(summonerData) {
                 setIsSearch(true);
             }
+            count++;
         }
     }
 
@@ -146,7 +149,7 @@ const SearchSection : NextPage = (props : any) => {
             </div>
 
             {isSearch ?
-            <MatchListLayer matchList={summonerData.matchDataList}></MatchListLayer>
+            <MatchListLayer matchList={summonerData.matchDataList} searchId={summonerId}></MatchListLayer>
             : <></>}
 
         </section>

@@ -9,23 +9,16 @@ export const text = css`
 
 
 
-
-
-
-
-
-
-
   .fs_10 {
     font-size : 10px;
   }
 
   .fs_12 {
-    font-size : 10px;
+    font-size : 12px;
   }
 
   .fs_14 {
-    font-size : 10px;
+    font-size : 14px;
   }
 `;
 

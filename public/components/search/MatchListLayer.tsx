@@ -1,13 +1,18 @@
 import Image from 'next/image';
 import { css } from '@emotion/react';
 import MatchInfoLayer from '@/components/search/MatchInfoLayer';
+import { useEffect } from 'react';
 
 
 const MatchListLayer = (Props : any) => {
 
-    const matchDatas = Props.matchList;
-    console.log(JSON.stringify(matchDatas[0].info.participants[0].summonerName));
+    let matchDatas = Props.matchList;
+    let summonerId = Props.searchId;
+    // console.log(JSON.stringify(matchDatas[0].info.participants[0].summonerName));
     
+    useEffect(() => {
+    },[matchDatas])
+
     const baseStyle = css`
         width: 100%;
         margin-top : 30px;
@@ -19,7 +24,7 @@ const MatchListLayer = (Props : any) => {
             // if(idx == 1)
             if(true)
             return <div>
-                {<MatchInfoLayer matchData={match.info} key={idx}></MatchInfoLayer>
+                {<MatchInfoLayer matchData={match.info} searchId={summonerId} key={idx}></MatchInfoLayer>
                 }
                 <br/>
             </div>

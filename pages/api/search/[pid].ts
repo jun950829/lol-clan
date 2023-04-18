@@ -21,7 +21,7 @@ export default async function handler (req: NextApiRequest, res : NextApiRespons
     const rankRequestUrl = `${API_RIOT_KR_URL}league/v4/entries/by-summoner/${summonersData.id}?api_key=` + api_key;
     const rankResponse = await fetch(rankRequestUrl);
 
-    const matchRequestUrl = `${API_RIOT_ASIA_URL}match/v5/matches/by-puuid/${summonersData.puuid}/ids?start=0&count=5&api_key=` + api_key;
+    const matchRequestUrl = `${API_RIOT_ASIA_URL}match/v5/matches/by-puuid/${summonersData.puuid}/ids?start=0&count=6&api_key=` + api_key;
     const matchResponse = await fetch(matchRequestUrl);
     const matchData = await matchResponse.json();
 
