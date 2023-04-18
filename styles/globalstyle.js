@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 import colors from "@styles/color/light";
+import text from "@styles/font/text";
 
 /** 글로벌 default css 세팅 */
 export const style = css`
@@ -26,6 +27,8 @@ export const style = css`
     width: 1200px;
     margin : 0 auto;
   }
+  
+  ${text}
 `;
 
 export const searchBtn = css`

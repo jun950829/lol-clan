@@ -30,6 +30,13 @@ export const spacing = {
     margin-left: ${value * marginUnit}px;
     margin-right: ${value * marginUnit}px;
   `,
+
+  df_sb : () => css`
+    display : flex;
+    flex-direction : row;
+    justify-content : space-between;
+    align-items : center;
+  `,
 };
 
 export const radius = {
